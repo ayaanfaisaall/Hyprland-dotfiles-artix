@@ -62,6 +62,8 @@ alias esp=". $HOME/export-esp.sh"
 alias dohayras="ollama serve"
 alias dracarys="ollama run llama3.1"
 alias lykiri="ollama stop llama3.1"
+alias strm='SINK=$(pactl get-default-sink) && pactl load-module module-simple-protocol-tcp rate=48000 format=s16le channels=2 source=${SINK}.monitor record=true port=8000 listen=0.0.0.0'
+alias stpstrm='pactl unload-module module-simple-protocol-tcp'
 
 # Dotfiles & Config Navigation 
 alias dots='cd ~/dotfiles'
